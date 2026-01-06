@@ -23,6 +23,9 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>The 2026 Corbett Cup</title>
     <style>
         * {
@@ -110,14 +113,14 @@
         .content-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            padding: 30px 60px 0px 60px;
+            padding: 15px 60px 0px 60px;
             gap: 40px;
         }
 
         .content-section-wide {
             display: grid;
             grid-template-columns: 1fr;
-            padding: 0px 60px 30px 60px;
+            padding: 0px 10px 15px 60px;
             gap: 40px;
         }
 
@@ -126,8 +129,8 @@
             color: #6b4794;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1px;
             margin-bottom: 15px;
+            font-family: "Oswald", sans-serif;
         }
 
         .event-date {
@@ -169,7 +172,7 @@
         }
 
         .qr-section {
-            padding: 25px 60px;
+            padding: 15px 60px;
             background: white;
         }
 
@@ -598,14 +601,16 @@
 
             <!-- Right Column -->
             <div>
-                <div class="info-row" style="margin-top: 87px;">
+                <div class="info-row" style="margin-top: 95px;">
                     <img src="imgs/clock.png" alt="Clock" width="25" height="25" class="info-icon">
                     <div><strong>9:00 AM - 4:00 PM</strong></div>
                 </div>
             </div>
         </div>
+        <div class="divider"></div>
+
         <div class="content-section-wide">
-                <div style="margin-top: 30px;">
+                <div style="margin-top: 15px;">
                     <div class="section-title">TOURNAMENT FORMAT</div>
                     <div class="format-item">
                         <img src="imgs/bracket.png" alt="Bracket" width="25" height="25" class="format-icon">
