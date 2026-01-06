@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
     <title>The Inaugural Corbett Cup</title>
     <style>
         * {
@@ -466,7 +467,84 @@
                 box-shadow: none;
             }
         }
+
+        /* Landscape orientation on mobile */
+        @media screen and (max-height: 500px) and (orientation: landscape) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 15px 40px 10px;
+            }
+
+            .header-graphic {
+                max-width: 400px;
+            }
+
+            .content-section {
+                grid-template-columns: 1fr 1fr;
+                padding: 15px 40px 0px 40px;
+            }
+
+            .content-section > div:last-child .info-row {
+                margin-top: 87px !important;
+            }
+
+            .content-section-wide {
+                padding: 0px 40px 15px 40px;
+            }
+
+            .divider,
+            .top-divider {
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+
+            .qr-section {
+                padding: 15px 40px;
+            }
+
+            .sponsors-section {
+                padding: 15px 40px;
+            }
+
+            .sponsors-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer {
+                height: 50px;
+            }
+        }
     </style>
+    <script>
+        // Force layout recalculation on orientation change
+        window.addEventListener('orientationchange', function() {
+            // Small delay to let the browser complete the orientation change
+            setTimeout(function() {
+                // Force reflow by reading and triggering layout
+                document.body.style.display = 'none';
+                document.body.offsetHeight; // Trigger reflow
+                document.body.style.display = '';
+                
+                // Scroll to top to reset view
+                window.scrollTo(0, 0);
+            }, 100);
+        });
+
+        // Also handle resize events for browsers that don't fire orientationchange
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                // Force reflow
+                document.body.style.display = 'none';
+                document.body.offsetHeight;
+                document.body.style.display = '';
+            }, 150);
+        });
+    </script>
 </head>
 <body>
     <div class="flyer">
