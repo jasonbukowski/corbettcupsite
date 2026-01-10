@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,9 +33,15 @@
             padding: 0;
             box-sizing: border-box;
             color: #000000;
-            -webkit-text-size-adjust: 100%; /* Prevents iOS text inflation */
+            -webkit-text-size-adjust: 100%;
             -moz-text-size-adjust: 100%;
             text-size-adjust: 100%;
+        }
+
+        html {
+            /* Force GPU acceleration for smoother orientation changes */
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
         }
 
         body {
@@ -46,6 +51,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            min-height: 100dvh; /* Dynamic viewport height for mobile */
             padding: 20px;
         }
 
@@ -163,7 +169,7 @@
         }
 
         .format-item div {
-            font-size: 16px; /* Explicit font size to prevent iOS inflation */
+            font-size: 16px;
         }
 
         .format-icon {
@@ -501,10 +507,11 @@
             }
         }
 
-        /* Landscape orientation on mobile */
+        /* Landscape orientation on mobile - using pure CSS */
         @media screen and (max-height: 500px) and (orientation: landscape) {
             body {
                 padding: 10px;
+                align-items: flex-start; /* Allow scrolling from top */
             }
 
             .header {
@@ -554,34 +561,22 @@
                 height: 80px;
             }
         }
-    </style>
-    <script>
-        // Force layout recalculation on orientation change
-        window.addEventListener('orientationchange', function() {
-            // Small delay to let the browser complete the orientation change
-            setTimeout(function() {
-                // Force reflow by reading and triggering layout
-                document.body.style.display = 'none';
-                document.body.offsetHeight; // Trigger reflow
-                document.body.style.display = '';
-                
-                // Scroll to top to reset view
-                window.scrollTo(0, 0);
-            }, 100);
-        });
 
-        // Also handle resize events for browsers that don't fire orientationchange
-        let resizeTimeout;
-        window.addEventListener('resize', function() {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(function() {
-                // Force reflow
-                document.body.style.display = 'none';
-                document.body.offsetHeight;
-                document.body.style.display = '';
-            }, 150);
-        });
-    </script>
+        /* Additional orientation media queries for better coverage */
+        @media screen and (orientation: portrait) {
+            .flyer {
+                /* Ensure proper rendering on portrait */
+                transform: translateZ(0);
+            }
+        }
+
+        @media screen and (orientation: landscape) {
+            .flyer {
+                /* Ensure proper rendering on landscape */
+                transform: translateZ(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="flyer">
