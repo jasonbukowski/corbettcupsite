@@ -161,17 +161,35 @@
             flex: 1;
         }
 
+        .price-text {
+            font-size: 16px;
+            color: #7fa643;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
         .scan-title {
-            font-size: 24px;
+            font-size: 20px;
             color: #7fa643;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .register-url {
-            font-size: 16px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .register-url a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .register-url a:visited,
+        .register-url a:hover,
+        .register-url a:active {
             color: #333;
         }
 
@@ -369,8 +387,9 @@
             <div class="qr-container">
                 <img src="imgs/qrcode.png" alt="QR Code" class="qr-code">
                 <div class="qr-text">
+                    <div class="price-text">$75 per player</div>
                     <div class="scan-title">SCAN TO REGISTER</div>
-                    <div class="register-url">www.CorbettCup2026.com/Register</div>
+                    <div class="register-url"><a href="https://register.corbettcup.com">https://register.corbettcup.com</a></div>
                 </div>
             </div>
         </div>
