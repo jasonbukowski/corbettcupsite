@@ -15,6 +15,14 @@
             color: #333333;
         }
 
+        .invisible {
+            visibility: hidden !important;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
         @page {
             size: 8.5in 11in;
             margin: 0;
@@ -24,7 +32,7 @@
             width: 8.5in;
             height: 11in;
             font-family: 'Arial', sans-serif;
-            background: #ffffff;
+            background: #F0F0F0;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
@@ -405,9 +413,9 @@
 
         <!-- Sponsors Section -->
         <div class="sponsors-section">
-            <div class="sponsors-title">SPONSORED BY:</div>
+            <div class="sponsors-title invisible">SPONSORED BY:</div>
             
-            <div class="sponsors-grid">
+            <div class="sponsors-grid invisible">
                 <div class="sponsor-box">
                     <img src="imgs/sponsor1.png" alt="Tampa Pickleball Crew">
                 </div>

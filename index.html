@@ -38,6 +38,14 @@
             text-size-adjust: 100%;
         }
 
+        .invisible {
+            visibility: hidden !important;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
         html {
             /* Force GPU acceleration for smoother orientation changes */
             -webkit-transform: translateZ(0);
@@ -674,9 +682,9 @@
 
         <!-- Sponsors Section -->
         <div class="sponsors-section">
-            <div class="sponsors-title">SPONSORED BY:</div>
+            <div class="sponsors-title hidden">SPONSORED BY:</div>
             
-            <div class="sponsors-grid">
+            <div class="sponsors-grid hidden">
                 <div class="sponsor-box">
                     <img src="imgs/sponsor1.png" alt="Tampa Pickleball Crew" width="300" height="150">
                 </div>
