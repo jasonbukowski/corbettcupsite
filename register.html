@@ -26,11 +26,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <title>Register - The 2026 Corbett Cup</title>
-
-    <!-- Start form embed -->
     <script src="https://sky.blackbaudcdn.net/static/reg-form-loader/5/main.js"></script>
-
+    <title>Register - The 2026 Corbett Cup</title>
     <style>
         * {
             margin: 0;
@@ -67,14 +64,14 @@
 
         .header {
             text-align: center;
-            padding: 15px 60px;
+            padding: 30px 60px 10px;
             background: #F0F0F0;
         }
 
         .header-graphic {
             width: 100%;
-            max-width: 400px;
-            margin: 0 auto 10px;
+            max-width: 650px;
+            margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -86,40 +83,29 @@
             display: block;
         }
 
+        .title-section {
+            margin: 20px 0;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #07ac51;
+            margin-top: 15px;
+        }
+
         .divider {
             height: 3px;
             background: #07ac51;
             margin: 0 60px;
         }
 
-        .content {
-            padding: 60px;
+        .embed-container {
+            padding: 40px 60px;
+        }
+
+        .back-section {
+            padding: 20px 60px 40px;
             text-align: center;
-        }
-
-        .page-title {
-            font-size: 36px;
-            color: #502d7f;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            font-family: "Oswald", sans-serif;
-            letter-spacing: 2px;
-        }
-
-        .coming-soon {
-            font-size: 24px;
-            color: #07ac51;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-
-        .message {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #333;
-            max-width: 600px;
-            margin: 0 auto 40px;
         }
 
         .back-link {
@@ -173,20 +159,20 @@
                 margin-right: 30px;
             }
 
-            .content {
-                padding: 40px 30px;
-            }
-
-            .page-title {
-                font-size: 28px;
-            }
-
-            .coming-soon {
+            .subtitle {
                 font-size: 20px;
             }
 
-            .message {
-                font-size: 16px;
+            .embed-container {
+                padding: 30px;
+            }
+
+            .back-section {
+                padding: 15px 30px 30px;
+            }
+
+            .footer {
+                height: 80px;
             }
         }
 
@@ -201,7 +187,7 @@
             }
 
             .header-graphic {
-                max-width: 280px;
+                margin-bottom: 10px;
             }
 
             .divider {
@@ -209,23 +195,17 @@
                 margin-right: 20px;
             }
 
-            .content {
-                padding: 30px 20px;
+            .subtitle {
+                font-size: 16px;
+                margin-top: 10px;
             }
 
-            .page-title {
-                font-size: 24px;
-                margin-bottom: 20px;
+            .embed-container {
+                padding: 20px;
             }
 
-            .coming-soon {
-                font-size: 18px;
-                margin-bottom: 20px;
-            }
-
-            .message {
-                font-size: 14px;
-                margin-bottom: 30px;
+            .back-section {
+                padding: 10px 20px 25px;
             }
 
             .back-link {
@@ -246,32 +226,44 @@
 </head>
 <body>
     <div class="page">
-        <!-- Header -->
-        <div class="header"></div>
+        <!-- Header with Logo -->
+        <div class="header">
+            <div class="header-graphic">
+                <img src="imgs/header.png" alt="Corbett Cup Logo and Ribbons" width="650" height="372">
+            </div>
+
+            <div class="title-section">
+                <div class="subtitle">A Pickleball Tournament for Parents, Faculty, and Friends</div>
+            </div>
+        </div>
 
         <div class="divider"></div>
 
-        <!-- Main Content -->
-        <div class="content">
-          
+        <!-- Embed Content Placeholder -->
+        <div class="embed-container">
           <div
-          data-blackbaud-registration-form
-          data-blackbaud-registration-form-envid="p-vjDlUj77sUiRLFDPMqjafg"
-          data-blackbaud-registration-form-id="aec667a6-68b7-41b6-97d3-647c6c439d20"
-          data-blackbaud-registration-form-zone="usa"
-          data-blackbaud-registration-form-header-height="0">
-          <!--
-            If your page has a header/overlay, then you can set this
-            'data-blackbaud-registration-form-header-height' value
-            to your header height so that the payment form will
-            scroll to the proper location when opened.
-          -->
+            data-blackbaud-registration-form
+            data-blackbaud-registration-form-envid="p-vjDlUj77sUiRLFDPMqjafg"
+            data-blackbaud-registration-form-id="aec667a6-68b7-41b6-97d3-647c6c439d20"
+            data-blackbaud-registration-form-zone="usa"
+            data-blackbaud-registration-form-header-height="0">
+            <!--
+              If your page has a header/overlay, then you can set this
+              'data-blackbaud-registration-form-header-height' value
+              to your header height so that the payment form will
+              scroll to the proper location when opened.
+            -->
           </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="back-section">
+            <a href="index.html" class="back-link">← Back to Home</a>
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            <img src="imgs/corbettlogo.png" alt="Footer Logo">
+            <img src="imgs/corbettlogo.png" alt="Footer Logo" width="275" height="65">
         </div>
     </div>
 </body>
