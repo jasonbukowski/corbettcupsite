@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/pple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/avicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Register - The 2026 Corbett Cup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333333;
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        html {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding: 20px;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 850px;
+            background: #F0F0F0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            padding: 15px 60px;
+            background: #F0F0F0;
+        }
+
+        .header-graphic {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-graphic img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .divider {
+            height: 3px;
+            background: #07ac51;
+            margin: 0 60px;
+        }
+
+        .content {
+            padding: 60px;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 36px;
+            color: #502d7f;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .coming-soon {
+            font-size: 24px;
+            color: #07ac51;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .message {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #502d7f;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:visited,
+        .back-link:hover,
+        .back-link:active {
+            color: #ffffff;
+        }
+
+        .back-link:hover {
+            background: #3d2262;
+        }
+
+        .footer {
+            height: 80px;
+            background: #502d7f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer img {
+            width: 275px;
+            height: 65px;
+        }
+
+        /* Tablet styles */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px 30px 10px;
+            }
+
+            .divider {
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+
+            .content {
+                padding: 40px 30px;
+            }
+
+            .page-title {
+                font-size: 28px;
+            }
+
+            .coming-soon {
+                font-size: 20px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+        }
+
+        /* Mobile styles */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+
+            .header {
+                padding: 15px 20px 10px;
+            }
+
+            .header-graphic {
+                max-width: 280px;
+            }
+
+            .divider {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .page-title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .coming-soon {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            .message {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+
+            .back-link {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+
+            .footer {
+                height: 60px;
+            }
+
+            .footer img {
+                width: 200px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <div class="header"></div>
+
+        <div class="divider"></div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="page-title">Registration</div>
+            <div class="coming-soon">Coming Soon!</div>
+            <div class="message">
+                Registration for The 2026 Corbett Cup will open shortly. Check back soon for details on how to secure your spot in this exciting pickleball tournament!
+            </div>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <img src="imgs/corbettlogo.png" alt="Footer Logo">
+        </div>
+    </div>
+</body>
+</html>
