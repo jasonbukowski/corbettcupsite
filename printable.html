@@ -11,439 +11,138 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The 2026 Corbett Cup - Print Version</title>
+    
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            color: #333333;
-        }
-
-        .invisible {
-            visibility: hidden !important;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        @page {
-            size: 8.5in 11in;
-            margin: 0;
-        }
-
-        html, body {
-            width: 8.5in;
-            height: 11in;
-            font-family: 'Arial', sans-serif;
-            background: #F0F0F0;
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .flyer {
-            width: 8.5in;
-            height: 11in;
-            background: #F0F0F0;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            padding: 0.25in;
-        }
-
-        .flyer-inner {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            border: 3px solid #502d7f;
-        }
-
-        .header {
-            text-align: center;
-            padding: 20px 50px 10px;
-            background: #F0F0F0;
-        }
-
-        .header-graphic {
-            width: 100%;
-            max-width: 440px;
-            margin: 0 auto 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .header-graphic img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .title-section {
-            margin: 10px 0;
-        }
-
-        .subtitle {
-            font-size: 18px;
-            color: #07ac51;
-            margin-top: 8px;
-        }
-
-        .divider {
-            height: 3px;
-            background: #07ac51;
-            margin: 0 50px;
-            flex-shrink: 0;
-        }
-
-        .content-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding: 12px 50px 0px 50px;
-            gap: 25px;
-        }
-
-        .content-section-wide {
-            display: grid;
-            grid-template-columns: 1fr;
-            padding: 0px 15px 12px 50px;
-        }
-
-        .section-title {
-            font-size: 18px;
-            color: #502d7f;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            font-family: "Oswald", sans-serif;
-        }
-
-        .event-date {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        .info-row {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 10px;
-            font-size: 14px;
-            line-height: 1.4;
-        }
-
-        .info-icon {
-            width: 20px;
-            height: auto;
-            margin-right: 8px;
-            flex-shrink: 0;
-        }
-
-        .format-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 8px;
-            font-size: 14px;
-            line-height: 1.4;
-        }
-
-        .format-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-            flex-shrink: 0;
-        }
-
-        .qr-section {
-            padding: 12px 50px;
-            background: #F0F0F0;
-        }
-
-        .qr-container {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-        }
-
-        .qr-code {
-            width: 80px;
-            height: 80px;
-            flex-shrink: 0;
-        }
-
-        .qr-text {
-            flex: 1;
-        }
-
-        .price-text {
-            font-size: 16px;
-            color: #502d7f;
-            font-weight: bold;
-            margin-bottom: 2px;
-        }
-
-        .scan-title {
-            font-size: 20px;
-            color: #502d7f;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 3px;
-        }
-
-        .register-url {
-            font-size: 14px;
-            color: #333;
-        }
-
-        .register-url a {
-            color: #333;
-            text-decoration: none;
-        }
-
-        .register-url a:visited,
-        .register-url a:hover,
-        .register-url a:active {
-            color: #333;
-        }
-
-        .top-divider {
-            height: 3px;
-            background: #502d7f;
-            margin: 0 50px 12px;
-            flex-shrink: 0;
-        }
-
-        .sponsors-section {
-            padding: 12px 50px 15px;
-            background: #F0F0F0;
-        }
-
-        .sponsors-title {
-            text-align: center;
-            font-size: 18px;
-            color: #333;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-            position: relative;
-        }
-
-        .sponsors-title::before,
-        .sponsors-title::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 160px;
-            height: 2px;
-            background: #07ac51;
-        }
-
-        .sponsors-title::before {
-            left: 0;
-        }
-
-        .sponsors-title::after {
-            right: 0;
-        }
-
-        .sponsors-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-bottom: 12px;
-        }
-
-        .sponsor-box {
-            border: 3px solid #07ac51;
-            padding: 5px;
-            text-align: center;
-            background: #F0F0F0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 85px;
-        }
-
-        .sponsor-box img {
-            max-width: 100%;
-            max-height: 75px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
-
-        .includes-text {
-            text-align: center;
-            font-size: 14px;
-            color: #333;
-            margin-top: 10px;
-        }
-
-        .footer {
-            height: 60px;
-            background: #502d7f;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: auto;
-            flex-shrink: 0;
-        }
-
-        .footer img {
-            width: 200px;
-            height: auto;
-            max-height: 48px;
-        }
-
-        /* Screen preview styles */
-        @media screen {
-            body {
-                background: #e0e0e0;
-                padding: 20px;
-                height: auto;
-                min-height: 100vh;
-            }
-
-            .flyer {
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-                margin: 0 auto;
-            }
-        }
-
-        /* Print styles */
-        @media print {
-            html, body {
-                width: 8.5in;
-                height: 11in;
-                margin: 0;
-                padding: 0;
-            }
-
-            body {
-                background: #F0F0F0;
-                padding: 0;
-            }
-
-            .flyer {
-                box-shadow: none;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    </style>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/printable.css">
+    
+    <title>The 2026 Corbett Cup - Printable</title>
 </head>
 <body>
     <div class="flyer">
         <div class="flyer-inner">
-        <!-- Header with Logo -->
-        <div class="header">
-            <div class="header-graphic">
-                <img src="imgs/header.png" alt="Corbett Cup Logo and Ribbons">
+            <!-- Header with Logo -->
+            <div class="header">
+                <div class="header-graphic">
+                    <img src="imgs/header.png" alt="Corbett Cup Logo and Ribbons">
+                </div>
+
+                <div class="title-section">
+                    <div class="subtitle">A Pickleball Tournament for Parents, Faculty, and Friends</div>
+                </div>
             </div>
 
-            <div class="title-section">
-                <div class="subtitle">A Pickleball Tournament for Parents, Faculty, and Friends</div>
+            <div class="divider"></div>
+
+            <!-- Main Content Grid -->
+            <div class="content-section">
+                <!-- Left Column -->
+                <div>
+                    <div class="section-title">EVENT DETAILS</div>
+                    <div class="event-date">SATURDAY, FEBRUARY 21, 2026</div>
+                    
+                    <div class="info-row">
+                        <img src="imgs/pin.png" alt="Location" class="info-icon">
+                        <div>
+                            <strong>Tampa Pickleball Crew (Ybor City)</strong><br>
+                            1701 E 2nd Ave, Tampa, FL 33605
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div>
+                    <div class="info-row" style="margin-top: 68px;">
+                        <img src="imgs/clock.png" alt="Clock" class="info-icon">
+                        <div><strong>Check-in Time: 9:00AM<br/>Tournament Start: 9:30AM</strong></div>
+                    </div>
+                </div>
             </div>
-        </div>
+            <div class="divider"></div>
 
-        <div class="divider"></div>
-
-        <!-- Main Content Grid -->
-        <div class="content-section">
-            <!-- Left Column -->
-            <div>
-                <div class="section-title">EVENT DETAILS</div>
-                <div class="event-date">SATURDAY, FEBRUARY 21, 2026</div>
-                
-                <div class="info-row">
-                    <img src="imgs/pin.png" alt="Location" class="info-icon">
-                    <div>
-                        <strong>Tampa Pickleball Crew (Ybor City)</strong><br>
-                        1701 E 2nd Ave, Tampa, FL 33605
+            <div class="content-section-wide">
+                <div style="margin-top: 12px;">
+                    <div class="section-title">TOURNAMENT FORMAT</div>
+                    <div class="format-item">
+                        <img src="imgs/bracket.png" alt="Bracket" class="format-icon">
+                        <div><strong>Round Robin followed by Elimination Bracket and Free Play</strong></div>
+                    </div>
+                    <div class="format-item">
+                        <img src="imgs/check.png" alt="Check" class="format-icon">
+                        <div><strong>Guaranteed Play:</strong> All team play at least 3 Round Robin games and 1 Elimination game</div>
+                    </div>
+                    <div class="format-item">
+                        <img src="imgs/people.png" alt="People" class="format-icon">
+                        <div><strong>Divisions:</strong> Men's and Women's doubles divisions for all skill levels.</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Column -->
-            <div>
-                <div class="info-row" style="margin-top: 68px;">
-                    <img src="imgs/clock.png" alt="Clock" class="info-icon">
-                    <div><strong>Check-in Time: 9:00AM<br/>Tournament Start: 9:30AM</strong></div>
-                </div>
-            </div>
-        </div>
+            <div class="divider"></div>
 
-        <div class="divider"></div>
-
-        <div class="content-section-wide">
-            <div style="margin-top: 12px;">
-                <div class="section-title">TOURNAMENT FORMAT</div>
-                <div class="format-item">
-                    <img src="imgs/bracket.png" alt="Bracket" class="format-icon">
-                    <div><strong>Round Robin followed by Elimination Bracket and Free Play</strong></div>
-                </div>
-                <div class="format-item">
-                    <img src="imgs/check.png" alt="Check" class="format-icon">
-                    <div><strong>Guaranteed Play:</strong> All team play at least 3 Round Robin games and 1 Elimination game</div>
-                </div>
-                <div class="format-item">
-                    <img src="imgs/people.png" alt="People" class="format-icon">
-                    <div><strong>Divisions:</strong> Men's and Women's doubles divisions for all skill levels.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- QR Code Section -->
-        <div class="qr-section">
-            <div class="qr-container">
-                <img src="imgs/qrcode.png" alt="QR Code" class="qr-code">
-                <div class="qr-text">
-                    <div class="price-text">$75 per player</div>
-                    <div class="scan-title">SCAN TO REGISTER</div>
-                    <div class="register-url"><a href="https://corbettcup.com/register">https://corbettcup.com/register</a></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sponsors Section -->
-        <div class="sponsors-section">
-            <div class="sponsors-title invisible">SPONSORED BY:</div>
-            
-            <div class="sponsors-grid invisible">
-                <div class="sponsor-box">
-                    <img src="imgs/sponsor1.png" alt="Tampa Pickleball Crew">
-                </div>
-                <div class="sponsor-box">
-                    <img src="imgs/sponsor2.png" alt="Sponsor 2">
-                </div>
-                <div class="sponsor-box">
-                    <img src="imgs/sponsor3.png" alt="Sponsor 3">
+            <!-- QR Code Section -->
+            <div class="qr-section">
+                <div class="qr-container">
+                    <img src="imgs/qrcode.png" alt="QR Code" class="qr-code">
+                    <div class="qr-text">
+                        <div class="price-text">$75 per player</div>
+                        <div class="scan-title">SCAN TO REGISTER</div>
+                        <div class="register-url"><a href="https://corbettcup.com/register">https://corbettcup.com/register</a></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="includes-text">
-                Pickleball 101 clinics and a limited supply of paddles will be available for new players. Refreshments will be provided.
-            </div>
-        </div>
+            <!-- Sponsors Section -->
+            <div class="sponsors-section">
+                <div class="sponsors-title invisible">SPONSORED BY:</div>
+                
+                <div class="sponsors-grid invisible">
+                    <div class="sponsor-box">
+                        <img src="imgs/sponsor1.png" alt="Tampa Pickleball Crew">
+                    </div>
+                    <div class="sponsor-box">
+                        <img src="imgs/sponsor2.png" alt="Sponsor 2">
+                    </div>
+                    <div class="sponsor-box">
+                        <img src="imgs/sponsor3.png" alt="Sponsor 3">
+                    </div>
+                </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <img src="imgs/corbettlogo.png" alt="Footer Logo">
-        </div>
+                <div class="includes-text">
+                    Pickleball 101 clinics and a limited supply of paddles will be available for new players. Refreshments will be provided.
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <img src="imgs/corbettlogo.png" alt="Footer Logo">
+            </div>
         </div>
     </div>
 </body>
