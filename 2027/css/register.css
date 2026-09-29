@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Register page — uses the shared hero + slanted section from main.css
+   ========================================================================== */
+
+/* the registration form sits in a rounded, softly outlined panel */
+.embed-container {
+  background: var(--white);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(16px, 3.5vw, 40px);
+  min-height: 738px;
+}
+
+.register-embed .wrap { max-width: calc(880px + var(--gutter) * 2); }
+
+.back-section { margin-top: 34px; text-align: center; }
