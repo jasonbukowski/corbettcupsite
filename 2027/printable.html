@@ -45,6 +45,10 @@
     <title>The 2027 Corbett Cup - Printable</title>
 </head>
 <body>
+    <div class="print-tools" aria-label="Flyer actions">
+        <a href="./">← Back to the event</a>
+        <button type="button" onclick="window.print()">Print flyer</button>
+    </div>
     <!-- Icon sprite -->
     <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
         <defs>
@@ -76,7 +80,7 @@
                     <div class="detail-card">
                         <span class="detail-icon"><svg class="icon"><use href="#i-calendar"/></svg></span>
                         <h3>Date</h3>
-                        <p class="detail-main">Saturday, February 20, 2027</p>
+                        <p class="detail-main"><time datetime="2027-02-20">Saturday<br>February 20, 2027</time></p>
                     </div>
                     <div class="detail-card">
                         <span class="detail-icon"><svg class="icon"><use href="#i-pin"/></svg></span>
@@ -119,14 +123,14 @@
                     <div class="feature">
                         <div class="feature-badge" aria-hidden="true"><span>3</span><i>+</i><span>1</span></div>
                         <div>
-                            <h3><svg class="icon"><use href="#i-check"/></svg> Guaranteed Play</h3>
+                            <h3>Guaranteed Play</h3>
                             <p><strong>All levels welcome. Everyone plays.</strong> All teams play at least 3 Round Robin games and 1 Elimination game.</p>
                         </div>
                     </div>
                     <div class="feature">
                         <div class="feature-badge" aria-hidden="true"><svg class="icon"><use href="#i-people"/></svg></div>
                         <div>
-                            <h3><svg class="icon"><use href="#i-people"/></svg> Divisions</h3>
+                            <h3>Divisions</h3>
                             <div class="chips"><span class="chip">Casual</span><span class="chip">Competitive</span></div>
                             <p>Men&rsquo;s, women&rsquo;s, and mixed doubles teams welcome in either.</p>
                         </div>
@@ -139,7 +143,7 @@
                 <img src="imgs/qrcode.png" alt="QR code to register" class="qr-code">
                 <div class="qr-text">
                     <!-- UPDATE: confirm 2027 Early Bird price and deadline before printing -->
-                    <div class="price-text">Lock in the <strong>$150</strong> Early Bird Team Rate before it flies away!</div>
+                    <div class="price-text"><strong>$150</strong> per team <span>· Early bird registration</span></div>
                     <div class="scan-title">Scan to Register Your Team</div>
                     <div class="register-url"><a href="register">https://corbettcup.com/register</a></div>
                 </div>
@@ -150,8 +154,8 @@
                 <h2 class="rule-title">Sponsored By</h2>
                 <div class="sponsors-grid">
                     <div class="sponsor-box"><img src="imgs/sponsor1.png" alt="Tampa Pickleball Crew"></div>
-                    <div class="sponsor-box"><img src="imgs/sponsor2.png" alt="Sponsor 2"></div>
-                    <div class="sponsor-box"><img src="imgs/sponsor3.png" alt="Sponsor 3"></div>
+                    <div class="sponsor-box"><img src="imgs/sponsor2.png" alt="Tampa Bay Sports Med"></div>
+                    <div class="sponsor-box"><img src="imgs/sponsor3.png" alt="The Prep Boutique"></div>
                 </div>
                 <p class="includes-text">A limited supply of paddles will be available for new players. Refreshments will be provided.</p>
             </section>
