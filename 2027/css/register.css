@@ -2,23 +2,6 @@
    Register page — uses the shared hero + slanted section from main.css
    ========================================================================== */
 
-/* the registration form sits in a rounded, softly outlined panel */
-.embed-container {
-  background: var(--white);
-  border: 2px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  padding: clamp(16px, 3.5vw, 40px);
-  min-height: 738px;
-}
-
-.register-embed .wrap { max-width: calc(880px + var(--gutter) * 2); }
-
-.back-section { margin-top: 34px; text-align: center; }
-/* ==========================================================================
-   Register page — uses the shared hero + slanted section from main.css
-   ========================================================================== */
-
 /* A compact version of the shared identity gets players to the form sooner. */
 .hero-compact { padding: 24px 0 30px; }
 .hero-compact .hero-badge { width: 88px; }
@@ -26,7 +9,6 @@
 .hero-compact .wm-top { font-size: 13px; letter-spacing: .18em; }
 .hero-compact .wm-top::before, .hero-compact .wm-top::after { width: 30px; height: 2px; }
 .hero-compact .wm-main { font-size: clamp(36px, 5vw, 48px); }
-.hero-compact .hero-meta { margin-top: 12px; }
 
 /* The form remains free to grow to the height supplied by Blackbaud. */
 .embed-container {
@@ -43,16 +25,10 @@
 .register-embed { padding-bottom: 52px; }
 .register-embed .rule-title { margin-bottom: 12px; }
 .registration-intro { margin-bottom: 28px; text-align: center; color: var(--slate); font-size: 16px; text-wrap: balance; }
-.form-help { margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--line); color: var(--slate); font-size: 14px; line-height: 1.6; }
-.form-help a, .back-link { color: var(--purple); text-underline-offset: 4px; }
-.form-help a:hover, .back-link:hover { color: var(--green-deep); }
-.form-notice { padding: 16px; border-radius: 8px; background: var(--mist); font-size: 15px; }
 .back-section { margin-top: 24px; text-align: center; }
-.back-link { display: inline-block; padding: 8px; font-size: 14px; }
 
 @media (max-width: 620px) {
   .hero-compact .hero-badge { width: 72px; }
   .register-embed .rule-title { font-size: 22px; letter-spacing: .08em; }
-  .register-embed .wrap { padding-top: 20px; }
   .embed-container { padding: 16px 12px; }
 }

@@ -11,157 +11,6 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 @page { size: 8.5in 11in; margin: 0; }
 
-body { font-family:'Inter','Arial',sans-serif; color:var(--ink); background:#cccccc; padding:20px;
-  display:flex; justify-content:center; -webkit-font-smoothing:antialiased; }
-img { display:block; }
-
-.flyer { width:8.5in; height:11in; background:var(--white); overflow:hidden;
-  display:flex; flex-direction:column; padding:0.125in; }
-.flyer-inner > * { flex-shrink:0; }
-.flyer-inner { flex:1; display:flex; flex-direction:column; border:3px solid var(--purple);
-  background:var(--white); overflow:hidden; }
-
-.icon { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.8;
-  stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
-
-/* Section titles — centered label with green rules on both sides ------------- */
-.rule-title { display:flex; align-items:center; gap:14px; margin-bottom:12px;
-  font-family:'Oswald',sans-serif; font-weight:600; font-size:15px; letter-spacing:.28em;
-  text-transform:uppercase; color:var(--ink); }
-.rule-title::before, .rule-title::after { content:""; flex:1; height:2px; border-radius:2px;
-  background:linear-gradient(90deg, transparent, var(--green-bright)); }
-.rule-title::after { background:linear-gradient(270deg, transparent, var(--green-bright)); }
-
-/* Hero — light band, dots at the sides, centered badge + wordmark -------------- */
-.hero { position:relative; text-align:center; padding:15px 40px 10px;
-  background:radial-gradient(ellipse 60% 70% at 50% 34%, var(--white) 0%, rgba(255,255,255,0) 100%), var(--mist); }
-.hero::before { content:""; position:absolute; inset:0; pointer-events:none;
-  background-image:radial-gradient(circle, rgba(146,105,201,.22) 2.6px, transparent 3px);
-  background-size:22px 22px;
-  -webkit-mask-image:linear-gradient(100deg, #000 0%, transparent 40%, transparent 60%, #000 100%);
-          mask-image:linear-gradient(100deg, #000 0%, transparent 40%, transparent 60%, #000 100%); }
-.hero > * { position:relative; }
-
-/* Badge — the shield artwork has an empty green banner; the year is live text
-   (an SVG overlay in the same coordinates as the image), so it scales with the badge
-   and can be edited in the HTML. */
-.badge { position:relative; display:block; }
-.badge img { width:100%; height:auto; display:block; }
-.badge svg { position:absolute; inset:0; width:100%; height:100%; overflow:visible; }
-.badge text { font-family:Arial, "Liberation Sans", Helvetica, sans-serif; font-weight:700; fill:#ffffff; }
-.hero-badge { width:92px; margin:0 auto; filter:drop-shadow(0 8px 10px rgba(80,45,127,.20)); }
-
-.wordmark { margin-top:10px; line-height:1; }
-.wm-top { display:flex; align-items:center; justify-content:center; gap:12px;
-  font-family:'Oswald',sans-serif; font-weight:600; font-size:14px; letter-spacing:.24em;
-  text-transform:uppercase; color:var(--purple); }
-.wm-top::before, .wm-top::after { content:""; width:38px; height:3px; border-radius:3px; background:var(--green-bright); }
-.wm-main { margin-top:3px; font-family:'Oswald',sans-serif; font-weight:700; font-size:48px; line-height:1.02;
-  letter-spacing:.05em; text-transform:uppercase; color:var(--purple); }
-.subtitle { margin-top:6px; font-weight:500; font-size:14px; color:var(--slate); }
-.subtitle em { color:var(--green-deep); font-style:normal; font-weight:600; }
-
-/* Details — white band with a slanted, purple-ribboned top edge ----------------- */
-.details { position:relative; margin-top:-1px; padding:45px 36px 0; }
-.details::before, .details::after { content:""; position:absolute; left:0; right:0; top:-1px; }
-.details::after { top:0; height:30px; background:var(--purple); clip-path:polygon(0 0, 100% 0, 0 100%); }
-.details::before { height:23px; background:var(--mist); clip-path:polygon(0 0, 100% 0, 0 100%); z-index:1; }
-.details > * { position:relative; z-index:2; }
-
-.detail-grid { display:grid; grid-template-columns:.9fr 1.15fr 1fr; gap:12px; }
-.detail-card { display:grid; grid-template-columns:30px 1fr; column-gap:10px; align-items:start; align-content:start;
-  padding:11px 12px; border-radius:12px; background:var(--mist); border-top:4px solid var(--green-bright); }
-.detail-icon { grid-row:1 / span 3; display:grid; place-items:center; width:30px; height:30px;
-  border-radius:50%; background:var(--purple); color:var(--white); font-size:16px; }
-.detail-card h3, .detail-card p { grid-column:2; }
-.detail-card h3 { font-family:'Oswald',sans-serif; font-weight:500; font-size:9px; letter-spacing:.28em;
-  text-transform:uppercase; color:var(--slate); }
-.detail-main { margin-top:2px; font-family:'Oswald',sans-serif; font-weight:600; font-size:14px; line-height:1.2;
-  letter-spacing:.02em; text-transform:uppercase; color:var(--purple); }
-.detail-sub { margin-top:3px; font-size:10.5px; line-height:1.4; color:var(--ink); }
-
-/* Format --------------------------------------------------------------------- */
-.format { padding:28px 36px 0; }
-.flow { list-style:none; position:relative; display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin-bottom:10px; }
-.flow::before { content:""; position:absolute; z-index:0; top:15px; left:16.6%; right:16.6%; border-top:2px dashed var(--lilac); }
-.flow-step { position:relative; z-index:1; text-align:center; padding:0 4px; }
-.flow-num { display:grid; place-items:center; width:30px; height:30px; margin:0 auto 6px; border-radius:50%;
-  background:var(--purple); color:var(--white); font-family:'Oswald',sans-serif; font-weight:700; font-size:16px;
-  box-shadow:0 0 0 4px var(--white), 0 0 0 6px var(--lilac); }
-.flow-step h3 { font-family:'Oswald',sans-serif; font-weight:600; font-size:14px; letter-spacing:.05em;
-  text-transform:uppercase; color:var(--purple); white-space:nowrap; }
-.flow-step p { margin:2px auto 0; max-width:27ch; font-size:11px; line-height:1.4; color:var(--slate); }
-
-.feature-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-.feature { display:flex; align-items:center; gap:12px; padding:11px 12px; border-radius:12px;
-  background:var(--mist); border-top:4px solid var(--green-bright); }
-.feature-badge { flex:0 0 auto; min-width:52px; height:52px; padding:0 8px; display:flex; align-items:center;
-  justify-content:center; gap:1px; border-radius:12px; background:var(--purple); color:var(--white);
-  font-family:'Oswald',sans-serif; font-weight:700; font-size:22px; line-height:1; }
-.feature-badge i { font-style:normal; font-size:14px; color:var(--lilac); margin:0 2px; }
-.feature-badge .icon { font-size:26px; stroke-width:1.5; }
-.feature h3 { display:flex; align-items:center; gap:6px; font-family:'Oswald',sans-serif; font-weight:600;
-  font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--purple); }
-.feature h3 .icon { color:var(--green-deep); font-size:14px; }
-.feature p { margin-top:2px; font-size:11px; line-height:1.4; color:var(--ink); }
-.feature p strong { color:var(--purple); font-weight:600; }
-
-.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:4px; }
-.chip { display:inline-block; padding:2px 10px; border-radius:999px; font-family:'Oswald',sans-serif; font-weight:600;
-  font-size:10px; letter-spacing:.14em; text-transform:uppercase; line-height:1.4; color:var(--white); background:var(--green-deep); }
-.chips + p { margin-top:4px; }
-
-/* Register band ---------------------------------------------------------------- */
-.register { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; gap:22px;
-  margin-top:28px; padding:12px 36px; color:var(--white);
-  background:linear-gradient(135deg, var(--green-deep) 0%, var(--green) 100%); }
-.register::before { content:""; position:absolute; inset:0; pointer-events:none;
-  background-image:radial-gradient(circle, rgba(255,255,255,.16) 2.6px, transparent 3px);
-  background-size:22px 22px;
-  -webkit-mask-image:linear-gradient(100deg, #000 0%, transparent 32%, transparent 68%, #000 100%);
-          mask-image:linear-gradient(100deg, #000 0%, transparent 32%, transparent 68%, #000 100%); }
-.register > * { position:relative; }
-.qr-code { width:72px; height:72px; flex-shrink:0; background:var(--white); padding:5px; border-radius:10px; }
-.price-text { font-family:'Oswald',sans-serif; font-weight:500; font-size:17px; line-height:1.15; letter-spacing:.02em;
-  text-transform:uppercase; color:var(--white); }
-.price-text strong { font-weight:700; }
-.scan-title { margin-top:6px; font-family:'Oswald',sans-serif; font-weight:700; font-size:14px; letter-spacing:.16em;
-  text-transform:uppercase; color:var(--white); }
-.register-url, .register-url a { margin-top:1px; font-size:11.5px; color:var(--white); text-decoration:none; }
-
-/* Sponsors ---------------------------------------------------------------------- */
-.sponsors { padding:26px 36px 0; }
-.sponsors-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; }
-.event-partner-card { display:flex; align-items:center; justify-content:center; height:68px; padding:5px;
-  background:var(--white); border:2px solid var(--line); border-radius:12px; }
-.event-partner-card img { max-width:100%; max-height:56px; width:auto; height:auto; object-fit:contain; }
-.includes-text { margin:14px auto 0; text-align:center; white-space:nowrap; font-size:11px; color:var(--slate); }
-.includes-text::before { content:""; display:block; width:40px; height:3px; margin:0 auto 8px; border-radius:3px; background:var(--lilac); }
-
-/* Footer ------------------------------------------------------------------------ */
-.footer { height:44px; margin-top:auto; flex-shrink:0; display:flex; align-items:center; justify-content:center;
-  background:var(--purple); }
-.footer img { height:34px; width:auto; }
-
-@media print {
-  * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
-  html, body { width:8.5in; height:11in; margin:0; padding:0; background:var(--white); }
-  .flyer { width:100%; height:100%; box-shadow:none; }
-}
-@media screen { .flyer { box-shadow:0 4px 20px rgba(0,0,0,.3); } }
-/* ==========================================================================
-   Printable flyer — 8.5 x 11 in, one page. Self-contained (does not use main.css),
-   but mirrors the 2027 website: same palette, type, section titles, cards, chips,
-   dotted hero, purple slash and green register band.
-   ========================================================================== */
-:root {
-  --purple:#502d7f; --lilac:#ceadfa;
-  --green-deep:#007836; --green:#0f9e50; --green-bright:#07ac51;
-  --slate:#5b5662; --ink:#333333; --mist:#f0f0f0; --line:#e1e1e1; --white:#ffffff;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-@page { size: 8.5in 11in; margin: 0; }
-
 body { font-family:'Inter','Arial',sans-serif; color:var(--ink); background:#e1e1e1; padding:20px;
   display:flex; flex-direction:column; align-items:center; min-width:856px; -webkit-font-smoothing:antialiased; }
 img { display:block; }
@@ -277,7 +126,7 @@ img { display:block; }
           mask-image:linear-gradient(100deg, #000 0%, transparent 32%, transparent 68%, #000 100%); }
 .register > * { position:relative; }
 .qr-code { width:96px; height:96px; flex-shrink:0; background:var(--white); padding:6px; border-radius:10px; }
-.price-text { font-family:'Oswald',sans-serif; font-weight:500; font-size:21px; line-height:1.15; color:var(--white); }
+.price-text { font-family:'Oswald',sans-serif; font-weight:500; font-size:21px; line-height:1.15; letter-spacing:.02em; text-transform:uppercase; color:var(--white); }
 .price-text strong { font-weight:700; font-size:34px; }
 .price-text span { font-family:'Inter',sans-serif; font-size:13px; }
 .scan-title { margin-top:6px; font-family:'Oswald',sans-serif; font-weight:700; font-size:14px; letter-spacing:.16em;
@@ -291,6 +140,7 @@ img { display:block; }
   background:var(--white); border:1px solid var(--line); border-radius:12px; }
 .event-partner-card img { max-width:100%; max-height:56px; width:auto; height:auto; object-fit:contain; }
 .includes-text { margin:12px auto 0; max-width:76ch; text-align:center; text-wrap:balance; font-size:12px; line-height:1.4; color:var(--slate); }
+.includes-text::before { content:""; display:block; width:40px; height:3px; margin:0 auto 8px; border-radius:3px; background:var(--lilac); }
 
 /* Footer ------------------------------------------------------------------------ */
 .footer { height:44px; margin-top:auto; flex-shrink:0; display:flex; align-items:center; justify-content:center;
