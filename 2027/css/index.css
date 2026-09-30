@@ -155,7 +155,7 @@
 
 .sponsors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
-.sponsor-box {
+.event-partner-card {
   display: flex; align-items: center; justify-content: center;
   min-height: 150px; padding: 14px;
   background: var(--white);
@@ -164,8 +164,8 @@
   box-shadow: var(--shadow-sm);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
-.sponsor-box:hover { transform: translateY(-5px); border-color: var(--green-bright); box-shadow: var(--shadow-md); }
-.sponsor-box img { max-height: 120px; width: auto; object-fit: contain; }
+.event-partner-card:hover { transform: translateY(-5px); border-color: var(--green-bright); box-shadow: var(--shadow-md); }
+.event-partner-card img { max-height: 120px; width: auto; object-fit: contain; }
 
 /* closing note — a short lilac rule sets it apart from the sponsor logos */
 .includes-text {
@@ -354,7 +354,7 @@
 
 .sponsors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
-.sponsor-box {
+.event-partner-card {
   display: flex; align-items: center; justify-content: center;
   min-height: 140px; padding: 20px;
   background: var(--white);
@@ -362,8 +362,8 @@
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
 }
-.sponsor-box img { max-height: 96px; width: auto; object-fit: contain; }
-.sponsor-box:first-child img { max-height: 104px; }
+.event-partner-card img { max-height: 96px; width: auto; object-fit: contain; }
+.event-partner-card:first-child img { max-height: 104px; }
 
 /* Closing note below the sponsor logos. */
 .includes-text {
@@ -397,9 +397,9 @@
   .flow::before { display: none; }
   .flow-step h3 { font-size: 22px; }
   .sponsors-grid { grid-template-columns: 1fr; gap: 14px; max-width: 380px; margin-inline: auto; }
-  .sponsor-box { min-height: 120px; padding: 16px; }
-  .sponsor-box img { max-height: 84px; }
-  .sponsor-box:first-child img { max-height: 90px; }
+  .event-partner-card { min-height: 120px; padding: 16px; }
+  .event-partner-card img { max-height: 84px; }
+  .event-partner-card:first-child img { max-height: 90px; }
   .feature { flex-direction: column; gap: 16px; padding: 22px; text-align: center; align-items: center; }
   .feature-badge { min-width: 64px; height: 64px; border-radius: 14px; font-size: 28px; }
   .feature-badge .icon { font-size: 34px; }
