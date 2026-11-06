@@ -1,0 +1,24 @@
+/* Preserve the printable flyer's band height and one-page layout. */
+.save-the-date { min-height: 120px; gap: 40px; text-align: center; }
+.save-title {
+  font-family: 'Oswald', sans-serif; font-weight: 700;
+  font-size: 28px; line-height: 1.2; letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.save-subtitle { margin-top: 6px; font-size: 14px; line-height: 1.4; }
+.flyer-note { padding: 18px 36px 20px; }
+.flyer-note .includes-text { margin: 0 auto; text-align: center; }
+
+/* Without sponsors, share the available page height across the main sections.
+   To restore sponsors, insert a .sponsors section before .flyer-note in the HTML.
+   These expansion rules then switch off and the note's original divider returns. */
+.flyer-inner:not(:has(> .sponsors)) > :is(.hero, .details, .format) {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flyer-inner:not(:has(> .sponsors)) > .format { flex-grow: 2; }
+.flyer-inner:not(:has(> .sponsors)) > .save-the-date { flex-grow: .5; }
+.flyer-inner:not(:has(> .sponsors)) .flyer-note .includes-text::before { display: none; }
+.flyer-inner:has(> .sponsors) > .sponsors { padding-bottom: 0; }

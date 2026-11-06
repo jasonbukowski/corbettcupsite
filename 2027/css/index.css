@@ -149,6 +149,11 @@
 }
 .price-text strong { font-size: clamp(56px, 8vw, 76px); font-weight: 700; margin-right: 8px; }
 .price-label { margin-top: 10px; font-size: 16px; font-weight: 500; }
+.save-date-message h2 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(28px, 4vw, 38px); letter-spacing: .06em; text-transform: uppercase;
+}
+.save-date-message p { margin-top: 6px; font-size: 18px; }
 
 /* Sponsors ----------------------------------------------------------------- */
 .sponsors { padding: clamp(44px, 6vw, 64px) 0; background: var(--white); }
@@ -177,6 +182,11 @@
   content: ""; display: block; width: 56px; height: 3px; margin: 0 auto 22px;
   border-radius: 3px; background: var(--lilac);
 }
+
+.closing-note { padding-block: 32px; }
+.closing-note .includes-text { margin: 0 auto; }
+/* The divider returns automatically when the sponsor template is restored. */
+main:not(:has(> .sponsors)) .closing-note .includes-text::before { display: none; }
 
 /* Responsive ------------------------------------------------------------------ */
 /* Tablet: keep things on as few lines as possible */

@@ -9,7 +9,6 @@
     gtag('js', new Date());
     gtag('config', 'G-MGRVLPJ3JV');
     </script>
-    <script defer src="https://sky.blackbaudcdn.net/static/reg-form-loader/5/main.js"></script>
     <script>document.documentElement.classList.add('js');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -45,7 +44,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/register.css">
 
-    <title>Register Now - The 2027 Corbett Cup</title>
+    <title>Save the Date - The 2027 Corbett Cup</title>
 </head>
 <body>
 
@@ -57,8 +56,8 @@
             <ul class="nav-links">
                 <li><a href="./#details">Details</a></li>
                 <li><a href="./#format">Format</a></li>
-                <li><a href="./#sponsors">Sponsors</a></li>
-                <li><a class="nav-cta" href="#register" aria-current="page">Register Now</a></li>
+                <!-- Restore this link when confirmed sponsors are published: <li><a href="./#sponsors">Sponsors</a></li> -->
+                <li><a class="nav-cta" href="#register" aria-current="page">Save the Date</a></li>
             </ul>
         </div>
     </nav>
@@ -78,8 +77,17 @@
         <!-- Registration -->
         <section class="details register-embed" id="register">
             <div class="wrap">
-                <h1 class="rule-title"><span>Register Now</span></h1>
+                <h1 class="rule-title"><span>Save the Date</span></h1>
 
+                <div class="registration-pending">
+                    <p class="opening-soon">Registration opening soon</p>
+                    <p>Individual registration · <strong>$75 per person</strong></p>
+                    <p class="event-reminder">Saturday, February 20, 2027</p>
+                </div>
+                <!-- When registration is ready, replace the notice with this template content,
+                     update the form ID, and restore the Register Now heading and navigation. -->
+                <template id="future-registration">
+                    <script defer src="https://sky.blackbaudcdn.net/static/reg-form-loader/5/main.js"></script>
                 <div class="embed-container">
                     <div
                       data-blackbaud-registration-form
@@ -89,6 +97,7 @@
                       data-blackbaud-registration-form-header-height="64">
                     </div>
                 </div>
+                </template>
 
                 <div class="back-section">
                     <a href="./" class="btn btn-ghost"><span aria-hidden="true">←</span> Back to Home</a>

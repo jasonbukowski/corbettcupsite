@@ -27,6 +27,23 @@
 .registration-intro { margin-bottom: 28px; text-align: center; color: var(--slate); font-size: 16px; text-wrap: balance; }
 .back-section { margin-top: 24px; text-align: center; }
 
+.registration-pending {
+  padding: clamp(28px, 5vw, 44px) 20px;
+  text-align: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.registration-pending p + p { margin-top: 14px; }
+.opening-soon {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 600;
+  color: var(--purple);
+}
+.event-reminder { color: var(--slate); }
+
 @media (max-width: 620px) {
   .hero-compact .hero-badge { width: 72px; }
   .register-embed .rule-title { font-size: 22px; letter-spacing: .08em; }
