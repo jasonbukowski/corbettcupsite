@@ -265,8 +265,8 @@ a { color: inherit; }
 /* Footer ----------------------------------------------------------------- */
 .footer {
   position: relative;
-  background: var(--purple);
-  color: var(--lilac);
+  background: var(--white);
+  color: var(--purple);
   text-align: center;
   padding: 34px var(--gutter) 28px;
   border-top: 4px solid var(--green-bright);
