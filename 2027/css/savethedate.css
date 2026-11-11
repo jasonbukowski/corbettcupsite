@@ -1,5 +1,6 @@
 /* Preserve the printable flyer's band height and one-page layout. */
-.save-the-date { min-height: 120px; gap: 40px; text-align: center; }
+.save-the-date { min-height: 120px; text-align: center; }
+.save-the-date .band-content { gap: 32px; }
 .save-title {
   font-family: 'Oswald', sans-serif; font-weight: 700;
   font-size: 28px; line-height: 1.2; letter-spacing: .08em;

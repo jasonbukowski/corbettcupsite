@@ -116,15 +116,20 @@ img { display:block; }
 .chips + p { margin-top:4px; }
 
 /* Register band ---------------------------------------------------------------- */
-.register { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; gap:22px;
-  margin-top:20px; padding:12px 36px; color:var(--white);
+.register { overflow:hidden; display:grid; grid-template-columns:1fr 4fr;
+  margin-top:20px; color:var(--white); background:var(--white); }
+.band-logo { display:flex; align-items:center; justify-content:center; padding:12px;
+  border-block:3px solid var(--green-deep); }
+.band-logo img { width:144px; max-width:100%; height:auto; }
+.band-content { position:relative; display:flex; align-items:center; justify-content:center; gap:22px;
+  min-width:0; padding:12px 24px;
   background:linear-gradient(135deg, var(--green-deep) 0%, var(--green) 100%); }
-.register::before { content:""; position:absolute; inset:0; pointer-events:none;
+.band-content::before { content:""; position:absolute; inset:0; pointer-events:none;
   background-image:radial-gradient(circle, rgba(255,255,255,.16) 2.6px, transparent 3px);
   background-size:22px 22px;
   -webkit-mask-image:linear-gradient(100deg, #000 0%, transparent 32%, transparent 68%, #000 100%);
           mask-image:linear-gradient(100deg, #000 0%, transparent 32%, transparent 68%, #000 100%); }
-.register > * { position:relative; }
+.band-content > * { position:relative; }
 .qr-code { width:96px; height:96px; flex-shrink:0; background:var(--white); padding:6px; border-radius:10px; }
 .price-text { font-family:'Oswald',sans-serif; font-weight:500; font-size:21px; line-height:1.15; letter-spacing:.02em; text-transform:uppercase; color:var(--white); }
 .price-text strong { font-weight:700; font-size:34px; }
@@ -141,11 +146,6 @@ img { display:block; }
 .event-partner-card img { max-width:100%; max-height:56px; width:auto; height:auto; object-fit:contain; }
 .includes-text { margin:12px auto 0; max-width:76ch; text-align:center; text-wrap:balance; font-size:12px; line-height:1.4; color:var(--slate); }
 .includes-text::before { content:""; display:block; width:40px; height:3px; margin:0 auto 8px; border-radius:3px; background:var(--lilac); }
-
-/* Footer ------------------------------------------------------------------------ */
-.footer { height:44px; margin-top:auto; flex-shrink:0; display:flex; align-items:center; justify-content:center;
-  background:var(--white); }
-.footer img { height:34px; width:auto; }
 
 @media print {
   * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
