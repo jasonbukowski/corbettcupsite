@@ -10,8 +10,9 @@
     gtag('config', 'G-MGRVLPJ3JV');
     </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+
     <!-- Favicons -->
     <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
@@ -29,120 +30,138 @@
     <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
     <link rel="manifest" href="favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#502d7f">
     <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    
+    <meta name="theme-color" content="#502d7f">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/printable.css">
-    
-    <title>The 2026 Corbett Cup - Printable</title>
+
+    <title>The 2027 Corbett Cup - Printable</title>
 </head>
 <body>
+    <div class="print-tools" aria-label="Flyer actions">
+        <a href="./">← Back to the event</a>
+        <button type="button" onclick="window.print()">Print flyer</button>
+    </div>
+    <!-- Icon sprite -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+            <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.400-6.500 11-6.500 11Z"/><circle cx="12" cy="10" r="2.400"/></symbol>
+            <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.500"/><path d="M12 7.500V12l3 2"/></symbol>
+            <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8.500" r="3.200"/><path d="M3 19.500c0-3.300 2.700-5.500 6-5.500s6 2.200 6 5.500"/><circle cx="17.200" cy="9.500" r="2.500"/><path d="M17.500 14c2.200.3 3.800 2 3.800 4.500"/></symbol>
+        </defs>
+    </svg>
+
     <div class="flyer">
         <div class="flyer-inner">
-            <!-- Header with Logo -->
-            <div class="header">
-                <div class="header-graphic">
-                    <img src="imgs/header.png" alt="Corbett Cup Logo and Ribbons">
+
+            <!-- Header -->
+            <header class="hero">
+                <span class="badge hero-badge" role="img" aria-label="The 2027 Corbett Cup badge"><img src="imgs/badge.png" alt="" width="538" height="654"><svg viewBox="0 0 538 654" aria-hidden="true"><!-- BANNER YEAR: edit the number below --><text x="268" y="535" text-anchor="middle" font-size="49" textLength="124" lengthAdjust="spacingAndGlyphs">2027</text></svg></span>
+                <div class="wordmark">
+                    <div class="wm-top">The 2nd Annual</div>
+                    <div class="wm-main">Corbett Cup</div>
                 </div>
+                <div class="subtitle">A Pickleball Tournament for <em>Parents, Faculty, and Friends</em></div>
+            </header>
 
-                <div class="title-section">
-                    <div class="subtitle">A Pickleball Tournament for Parents, Faculty, and Friends</div>
+            <!-- Details -->
+            <section class="details">
+                <h2 class="rule-title">Event Details</h2>
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <span class="detail-icon"><svg class="icon"><use href="#i-calendar"/></svg></span>
+                        <h3>Date</h3>
+                        <p class="detail-main"><time datetime="2027-02-20">Saturday<br>February 20, 2027</time></p>
+                    </div>
+                    <div class="detail-card">
+                        <span class="detail-icon"><svg class="icon"><use href="#i-pin"/></svg></span>
+                        <h3>Location</h3>
+                        <p class="detail-main">Tampa Pickleball Crew</p>
+                        <p class="detail-sub">Ybor City<br>1701 E 2nd Ave, Tampa, FL 33605</p>
+                    </div>
+                    <div class="detail-card">
+                        <span class="detail-icon"><svg class="icon"><use href="#i-clock"/></svg></span>
+                        <h3>Schedule</h3>
+                        <p class="detail-main">Check-in: 9:00 AM</p>
+                        <p class="detail-sub">Tournament start: 9:30 AM</p>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="divider"></div>
+            <!-- Format -->
+            <section class="format">
+                <h2 class="rule-title">Tournament Format</h2>
 
-            <!-- Main Content Grid -->
-            <div class="content-section">
-                <!-- Left Column -->
-                <div>
-                    <div class="section-title">EVENT DETAILS</div>
-                    <div class="event-date">SATURDAY, FEBRUARY 21, 2026</div>
-                    
-                    <div class="info-row">
-                        <img src="imgs/pin.png" alt="Location" class="info-icon">
+                <ol class="flow">
+                    <li class="flow-step">
+                        <span class="flow-num">1</span>
+                        <h3>Round Robin</h3>
+                        <p>Find your rhythm and meet your competition.</p>
+                    </li>
+                    <li class="flow-step">
+                        <span class="flow-num">2</span>
+                        <h3>Elimination Bracket</h3>
+                        <p>The pressure&rsquo;s on as the bracket narrows to a champion.</p>
+                    </li>
+                    <li class="flow-step">
+                        <span class="flow-num">3</span>
+                        <h3>Free Play</h3>
+                        <p>Stick around, keep the paddles moving, and enjoy the day.</p>
+                    </li>
+                </ol>
+
+                <div class="feature-grid">
+                    <div class="feature">
+                        <div class="feature-badge" aria-hidden="true"><span>3</span><i>+</i><span>1</span></div>
                         <div>
-                            <strong>Tampa Pickleball Crew (Ybor City)</strong><br>
-                            1701 E 2nd Ave, Tampa, FL 33605
+                            <h3>Guaranteed Play</h3>
+                            <p><strong>All levels welcome. Everyone plays.</strong> All teams play at least 3 Round Robin games and 1 Elimination game.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-badge" aria-hidden="true"><svg class="icon"><use href="#i-people"/></svg></div>
+                        <div>
+                            <h3>Divisions</h3>
+                            <div class="chips"><span class="chip">Men's</span><span class="chip">Women's</span></div>
+                            <p>Men's and women's divisions. Register individually, all skill levels welcome.</p>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Right Column -->
-                <div>
-                    <div class="info-row" style="margin-top: 68px;">
-                        <img src="imgs/clock.png" alt="Clock" class="info-icon">
-                        <div><strong>Check-in Time: 9:00AM<br/>Tournament Start: 9:30AM</strong></div>
-                    </div>
+            <!-- Register -->
+            <section class="register">
+                <div class="band-logo">
+                    <img src="imgs/CP_RGB_Primary_1_CLR_side_md.png" alt="Corbett Preparatory School" width="232" height="130">
                 </div>
-            </div>
-            <div class="divider"></div>
-
-            <div class="content-section-wide">
-                <div style="margin-top: 12px;">
-                    <div class="section-title">TOURNAMENT FORMAT</div>
-                    <div class="format-item">
-                        <img src="imgs/bracket.png" alt="Bracket" class="format-icon">
-                        <div><strong>Round Robin followed by Elimination Bracket and Free Play</strong></div>
-                    </div>
-                    <div class="format-item">
-                        <img src="imgs/check.png" alt="Check" class="format-icon">
-                        <div><strong>Guaranteed Play:</strong> All team play at least 3 Round Robin games and 1 Elimination game</div>
-                    </div>
-                    <div class="format-item">
-                        <img src="imgs/people.png" alt="People" class="format-icon">
-                        <div><strong>Divisions:</strong> Men's and Women's doubles divisions for all skill levels.</div>
-                    </div>
+                <div class="band-content">
+                <img src="imgs/qrcode.png" alt="QR code to register" class="qr-code">
+                <div class="qr-text">
+                    <div class="price-text"><strong>$75</strong> per person</div>
+                    <div class="scan-title">Scan to Register Now</div>
+                    <div class="register-url"><a href="register">https://corbettcup.com/register</a></div>
                 </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <!-- QR Code Section -->
-            <div class="qr-section">
-                <div class="qr-container">
-                    <img src="imgs/qrcode.png" alt="QR Code" class="qr-code">
-                    <div class="qr-text">
-                        <div class="price-text">Lock in the $75 Early Bird rate before it flies away after Feb 6th!</div>
-                        <div class="scan-title">SCAN TO REGISTER</div>
-                        <div class="register-url"><a href="https://corbettcup.com/register">https://corbettcup.com/register</a></div>
-                    </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Sponsors Section -->
-            <div class="sponsors-section">
-                <div class="sponsors-title invisible">SPONSORED BY:</div>
-                
-                <div class="sponsors-grid invisible">
-                    <div class="sponsor-box">
-                        <img src="imgs/sponsor1.png" alt="Tampa Pickleball Crew">
-                    </div>
-                    <div class="sponsor-box">
-                        <img src="imgs/sponsor2.png" alt="Sponsor 2">
-                    </div>
-                    <div class="sponsor-box">
-                        <img src="imgs/sponsor3.png" alt="Sponsor 3">
-                    </div>
+            <!-- Sponsors -->
+            <section class="sponsors">
+                <h2 class="rule-title">Sponsored By</h2>
+                <div class="sponsors-grid">
+                    <div class="event-partner-card"><img src="imgs/sponsor1.png" alt="Tampa Pickleball Crew"></div>
+                    <div class="event-partner-card"><img src="imgs/sponsor2.png" alt="Tampa Bay Sports Med"></div>
+                    <div class="event-partner-card"><img src="imgs/sponsor3.png" alt="The Prep Boutique"></div>
                 </div>
-
-                <div class="includes-text">
-                    Pickleball 101 clinics and a limited supply of paddles will be available for new players. Refreshments will be provided.
-                </div>
-            </div>
-
-            <!-- Footer -->
-            <div class="footer">
-                <img src="imgs/corbettlogo.png" alt="Footer Logo">
-            </div>
+                <p class="includes-text">A limited supply of paddles will be available for new players. Refreshments will be provided.</p>
+            </section>
         </div>
     </div>
 </body>

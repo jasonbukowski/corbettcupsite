@@ -1,0 +1,406 @@
+/* Flyer Container */
+.flyer {
+  width: 100%;
+  max-width: 850px;
+  background: var(--gray-bg);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography */
+.inaugural {
+  font-size: 28px;
+  color: var(--purple);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.corbett-cup {
+  font-size: 58px;
+  color: var(--purple);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+/* Content Sections */
+.content-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 15px 60px 0px 60px;
+  gap: 40px;
+}
+
+.content-section-wide {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0px 10px 15px 60px;
+  gap: 40px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: var(--purple);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-family: "Oswald", sans-serif;
+}
+
+.event-date {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.info-icon {
+  width: 25px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.format-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.format-item div {
+  font-size: 16px;
+}
+
+.format-icon {
+  width: 25px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* Register Section */
+.qr-section {
+  padding: 15px 60px;
+  background: var(--gray-bg);
+}
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.price-text {
+  font-size: 22px;
+  color: var(--green);
+  font-weight: bold;
+  text-align: center;
+}
+
+.register-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 40px;
+  background: var(--purple);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+}
+
+.register-btn:visited,
+.register-btn:hover,
+.register-btn:active {
+  color: var(--white);
+}
+
+.register-btn:hover {
+  background: var(--purple);
+}
+
+/* Sponsors Section */
+.sponsors-section {
+  padding: 25px 60px 30px;
+  background: var(--gray-bg);
+}
+
+.sponsors-title {
+  text-align: center;
+  font-size: 24px;
+  color: var(--text);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.sponsors-title::before,
+.sponsors-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 200px;
+  height: 2px;
+  background: var(--green);
+}
+
+.sponsors-title::before {
+  left: 0;
+}
+
+.sponsors-title::after {
+  right: 0;
+}
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.sponsor-box {
+  border: 3px solid var(--green);
+  padding: 5px;
+  text-align: center;
+  background: var(--gray-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.sponsor-box img {
+  max-width: 100%;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.sponsor-placeholder {
+  width: 100%;
+  height: 80px;
+  background: var(--gray-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.includes-text {
+  text-align: center;
+  font-size: 18px;
+  color: var(--text);
+  margin-top: 15px;
+}
+
+/* Print Styles */
+@media print {
+  body {
+      padding: 0;
+  }
+  .flyer {
+      box-shadow: none;
+  }
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+  .content-section {
+      grid-template-columns: 1fr;
+      padding: 15px 30px 0px 30px;
+      gap: 15px;
+  }
+
+  .content-section-wide {
+      padding: 0px 10px 15px 30px;
+  }
+
+  .content-section > div:last-child .info-row {
+      margin-top: 0 !important;
+  }
+
+  .section-title {
+      font-size: 20px;
+      font-family: "Oswald", sans-serif;
+  }
+
+  .event-date {
+      font-size: 18px;
+  }
+
+  .qr-section {
+      padding: 15px 30px;
+  }
+
+  .sponsors-section {
+      padding: 20px 30px;
+  }
+
+  .sponsors-title::before,
+  .sponsors-title::after {
+      width: 80px;
+  }
+
+  .sponsors-grid {
+      gap: 15px;
+  }
+
+  .sponsor-box {
+      padding: 15px 10px;
+      min-height: 100px;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+  .content-section {
+      padding: 10px 20px 0px 20px;
+      gap: 10px;
+  }
+
+  .content-section-wide {
+      padding: 0px 10px 10px 20px;
+  }
+
+  .content-section-wide > div {
+      margin-top: 10px !important;
+  }
+
+  .section-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-family: "Oswald", sans-serif;
+  }
+
+  .event-date {
+      font-size: 16px;
+      margin-bottom: 15px;
+  }
+
+  .info-row,
+  .format-item {
+      font-size: 14px;
+  }
+
+  .format-item div {
+      font-size: 14px;
+  }
+
+  .qr-section {
+      padding: 10px 20px;
+  }
+
+  .qr-container {
+      gap: 15px;
+  }
+
+  .sponsors-section {
+      padding: 15px 20px;
+  }
+
+  .sponsors-title {
+      font-size: 18px;
+  }
+
+  .sponsors-title::before,
+  .sponsors-title::after {
+      width: 50px;
+  }
+
+  .sponsors-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+  }
+
+  .sponsor-box {
+      padding: 20px 15px;
+      min-height: 80px;
+  }
+
+  .includes-text {
+      font-size: 14px;
+  }
+}
+
+/* Landscape Orientation */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  body {
+      padding: 10px;
+      align-items: flex-start;
+  }
+
+  .header {
+      padding: 15px 40px 10px;
+  }
+
+  .header-graphic {
+      max-width: 400px;
+  }
+
+  .content-section {
+      grid-template-columns: 1fr 1fr;
+      padding: 15px 40px 0px 40px;
+  }
+
+  .content-section > div:last-child .info-row {
+      margin-top: 95px !important;
+  }
+
+  .content-section-wide {
+      padding: 0px 10px 15px 40px;
+  }
+
+  .divider,
+  .top-divider {
+      margin-left: 40px;
+      margin-right: 40px;
+  }
+
+  .qr-section {
+      padding: 15px 40px;
+  }
+
+  .sponsors-section {
+      padding: 15px 40px;
+  }
+
+  .sponsors-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section-title {
+      font-family: "Oswald", sans-serif;
+  }
+}
+
+/* Orientation Fixes */
+@media screen and (orientation: portrait) {
+  .flyer {
+      transform: translateZ(0);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .flyer {
+      transform: translateZ(0);
+  }
+}
